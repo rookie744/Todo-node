@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="container-main">
+            <div class="container-form">
+                <div class="task-form-header">
+                    Add your Task
+                </div>
+                <form action="/add" method="POST">
+                    <input type="text" id="todo_input" name="text" placeholder="Add the text here..."/>
+                    <Label for="priority-list" >priority</Label>
+                    <select id="priority-list" name="priority">
+                        <option>High</option>
+                        <option>Medium</option>
+                        <option>Low</option>
+                    </select>
+                    <button id="add_btn">Add</button>
+                </form>
+            </div>
+            <div class="container-list">
+                    <%todos.forEach((obj) => {%>
+                        <div class="container <%= obj.priority %> <%= obj.status %>">
+                            <button class="complete_btn" data-id="<%= obj._id %>" data-status="<%= obj.status %>"></button>
+                            <span><%= obj.text %></span> 
+                            <span><%= obj.priority %></span>
+                            <span><%= obj.status %></span>
+                            <a class="fa fa-trash-o delete_btn" data-id="<%= obj._id %>"> </a>
+                        </div>
+                    <%})%>
+            </div>  
+        </div>
+    </body>
+    <footer>
+        <script src="client-side.js"></script>
+    </footer>
+</html>

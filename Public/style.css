@@ -1,0 +1,48 @@
+.container-main
+{
+    border:1px solid !important;
+    border-radius: 20px;
+}
+.container-list
+{
+    border-top:1px solid !important;
+    padding: 20px;
+    border-radius: 20px;
+    display: grid;
+    gap: 20px;
+}
+.task-form-header
+{
+    border-bottom: 1px solid !important;
+    padding: 20px;
+    border-radius: 20px;
+}
+.container
+{
+    border:1px solid !important;
+    padding: 20px;
+    border-radius: 20px;
+}
+.complete_btn 
+{
+    border-radius: 27px;
+    height: 16px;
+    background-color: white;
+    cursor: pointer;
+}
+.delete_btn
+{
+    cursor: pointer;
+}
+.High
+{
+    background: #ff00001a;
+}
+.Medium
+{
+    background: #ffff0038;
+}
+.Low
+{
+    background: #00800029;
+}
